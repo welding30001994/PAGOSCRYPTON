@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>PAGOS-CRYPTO</title>
-  
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -19,14 +9,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000000; /* Negro */
-            color: #FFFFFF; /* Blanco */
+            background-color: #000000;
+            color: #FFFFFF;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         nav {
-            background: #006400; /* Verde oscuro */
+            background: #006400;
             padding: 10px;
             text-align: center;
             width: 100%;
@@ -38,44 +28,33 @@
             display: inline-block;
         }
         nav a:hover {
-            background: #008000; /* Verde más claro */
+            background: #008000;
         }
         .container {
             display: flex;
-            justify-content: flex-start;
+            flex-wrap: wrap;
+            justify-content: center;
             width: 90%;
         }
         .content {
             display: flex;
             flex-direction: column;
-            width: 70%;
+            width: 100%;
+            max-width: 800px;
         }
         section {
             margin: 20px;
             padding: 15px;
-            background: #006400; /* Verde oscuro */
+            background: #006400;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            color: #FFFFFF; /* Blanco */
+            color: #FFFFFF;
             text-align: center;
             max-height: 300px;
             overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: #008000 #003300;
-        }
-        section::-webkit-scrollbar {
-            width: 8px;
-        }
-        section::-webkit-scrollbar-track {
-            background: #003300;
-            border-radius: 5px;
-        }
-        section::-webkit-scrollbar-thumb {
-            background: #008000;
-            border-radius: 5px;
         }
         .wallet-info {
-            background: #008000; /* Verde más claro */
+            background: #008000;
             padding: 10px;
             margin-top: 10px;
             border-radius: 5px;
@@ -84,13 +63,15 @@
             font-weight: bold;
         }
         aside {
-            background: #008000; /* Verde más claro */
+            background: #008000;
             margin: 20px;
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             color: black;
-            width: 25%;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
         }
         .aside-box {
             background: #006400;
@@ -98,17 +79,30 @@
             padding: 10px;
             margin: 5px 0;
             border-radius: 5px;
-            text-align: center;
             font-weight: bold;
             cursor: pointer;
         }
         footer {
             text-align: center;
             padding: 10px;
-            background: #006400; /* Verde oscuro */
+            background: #006400;
             color: #FFFFFF;
             margin-top: 20px;
             width: 100%;
+        }
+
+        /* Media Queries para hacer el sitio responsive */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+            .content {
+                width: 70%;
+            }
+            aside {
+                width: 25%;
+            }
         }
     </style>
 </head>
@@ -146,9 +140,5 @@
         <p>Author: Hege Refsnes</p>
         <p><a href="mailto:hege@example.com" style="color: #FFFFFF;">hege@example.com</a></p>
     </footer>
-</body>
-</html>
-<!-- partial -->
-  
 </body>
 </html>
